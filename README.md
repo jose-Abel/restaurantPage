@@ -30,6 +30,8 @@ For the linters, this tests runs once you make a PR, if you have it in the respe
 ### Acknowledgments
 A special acknowledgment and appreciation to Microverse for helping me gaining new knowledge as a software developer.
 
+Photo by Rene Asmussen from Pexels
+
 
 ## 📝 License
 This project is MIT licensed.
