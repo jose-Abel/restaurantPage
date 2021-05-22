@@ -30,48 +30,43 @@ const createHomePage = () => {
     secondImage.style.borderRadius = "20%";
 
     // Mounting Navbar
-    loadNavBar(contentId);
-
+    document.addEventListener("DOMContentLoaded", () => {
+        loadNavBar(contentId);
+    });
+    
     // Mounting H1
     document.addEventListener("DOMContentLoaded", () => {
         contentId.appendChild(h1);
     });
 
-
     // Creating the First Div
     let firstDivText1 = "Join us at Olive Garden Restaurant for great food, great drinks, and great company. You can relax and enjoy specials during your special events. We’ve got a fully stocked bar, comfortable seating, free Wi-Fi, and a spacious outdoor covered deck area.";
 
     let firstDivText2 = "You can choose from our wide range of beers, wines, and spirits while enjoying a freshly prepared meal from menu. Our happy hour specials run from 2 to 6 p.m. Olive Garden Restaurant is a fantastic place to bring family and friends to enjoy the hospitality and community spirit.";
-
-    const firstDivBoxElements = createDivBox(firstImage, firstDivText1, firstDivText2);
-
-    // Mounting First Div
-    loadDivBox(contentId, firstDivBoxElements);
-
-
+    
+    const firstDivBoxElements = createDivBox({imageElement: firstImage, span1Content: firstDivText1, span2Content: firstDivText2});
 
     // Creating the Second Div
     let secondDivText1 = "Hours of Operation:";
     
     let secondDivText2 = "Sunday: 8am - 8pm / Monday: 6am - 6pm / Tuesday: 6am - 6pm / Wednesday: 6am - 6pm / Thursday: 6am - 10pm / Friday: 6am - 10pm / Saturday: 8am - 10pm";
     
-    const secondDivBoxElements = createDivBox(secondImage, secondDivText1, secondDivText2);
-
-    // Mounting Second Div
-    loadDivBox(contentId, secondDivBoxElements);
-
-
+    
+    const secondDivBoxElements = createDivBox({imageElement: secondImage, span1Content: secondDivText1, span2Content: secondDivText2});
 
     // Creating the Third Div
     let thirdDivText1 = "123 Main Dr, Venus, FL 33960, EE. UU.";
 
     let thirdDivText2 = "";
     
-    const thirdDivBoxElements = createDivBox(thirdImage, thirdDivText1, thirdDivText2);
+    const thirdDivBoxElements = createDivBox({imageElement: thirdImage, span1Content: thirdDivText1, span2Content: thirdDivText2});
 
-    // Mounting Third Div
-    loadDivBox(contentId, thirdDivBoxElements);
-
+    // Mounting the Div's
+    document.addEventListener("DOMContentLoaded", () => {
+        loadDivBox(contentId, firstDivBoxElements);
+        loadDivBox(contentId, secondDivBoxElements);
+        loadDivBox(contentId, thirdDivBoxElements);
+    });
 }
 
 export default createHomePage;
