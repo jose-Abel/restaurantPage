@@ -1,58 +1,59 @@
-import createHomePage from "./home";
-import createMenuPage from "./menu";
-import createContactPage from "./contact";
-import loadNavbar from "./navbar";
+/* eslint-disable no-use-before-define */
 
-const contentId = document.getElementById("content");
+import createHomePage from './home';
+import createMenuPage from './menu';
+import createContactPage from './contact';
+import loadNavbar from './navbar';
 
-
-document.addEventListener("DOMContentLoaded", () => {
-    const contentId = document.getElementById("content");
-
-    loadNavbar(contentId);
-    createHomePage();
-
-    const homeTab = document.getElementById("home-tab");
-    const menuTab = document.getElementById("menu-tab");
-    const contactTab = document.getElementById("contact-tab");
-    
-    homeTab.addEventListener("click", runHomeTab);
-    menuTab.addEventListener("click", runMenuTab);
-    contactTab.addEventListener("click", runContactTab);
-});
+const contentId = document.getElementById('content');
 
 const runHomeTab = () => {
-    content.innerHTML = "";
-    loadNavbar(contentId);
-    createHomePage();
+  contentId.innerHTML = '';
+  loadNavbar(contentId);
+  createHomePage();
 
-    const menuTab = document.getElementById("menu-tab");
-    const contactTab = document.getElementById("contact-tab");
+  const menuTab = document.getElementById('menu-tab');
+  const contactTab = document.getElementById('contact-tab');
 
-    menuTab.addEventListener("click", runMenuTab);
-    contactTab.addEventListener("click", runContactTab);
-}
+  menuTab.addEventListener('click', runMenuTab);
+  contactTab.addEventListener('click', runContactTab);
+};
 
 const runMenuTab = () => {
-    content.innerHTML = "";
-    loadNavbar(contentId);
-    createMenuPage();
+  contentId.innerHTML = '';
+  loadNavbar(contentId);
+  createMenuPage();
 
-    const homeTab = document.getElementById("home-tab");
-    const contactTab = document.getElementById("contact-tab");
+  const homeTab = document.getElementById('home-tab');
+  const contactTab = document.getElementById('contact-tab');
 
-    homeTab.addEventListener("click", runHomeTab);
-    contactTab.addEventListener("click", runContactTab);
-}
+  homeTab.addEventListener('click', runHomeTab);
+  contactTab.addEventListener('click', runContactTab);
+};
 
 const runContactTab = () => {
-    content.innerHTML = "";
-    loadNavbar(contentId);
-    createContactPage();
+  contentId.innerHTML = '';
+  loadNavbar(contentId);
+  createContactPage();
 
-    const homeTab = document.getElementById("home-tab");
-    const menuTab = document.getElementById("menu-tab");
+  const homeTab = document.getElementById('home-tab');
+  const menuTab = document.getElementById('menu-tab');
 
-    homeTab.addEventListener("click", runHomeTab);
-    menuTab.addEventListener("click", runMenuTab);
-}
+  homeTab.addEventListener('click', runHomeTab);
+  menuTab.addEventListener('click', runMenuTab);
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+  const contentId = document.getElementById('content');
+
+  loadNavbar(contentId);
+  createHomePage();
+
+  const homeTab = document.getElementById('home-tab');
+  const menuTab = document.getElementById('menu-tab');
+  const contactTab = document.getElementById('contact-tab');
+
+  homeTab.addEventListener('click', runHomeTab);
+  menuTab.addEventListener('click', runMenuTab);
+  contactTab.addEventListener('click', runContactTab);
+});
