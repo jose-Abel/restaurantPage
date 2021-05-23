@@ -44,8 +44,6 @@ const runContactTab = () => {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-  const contentId = document.getElementById('content');
-
   loadNavbar(contentId);
   createHomePage();
 
