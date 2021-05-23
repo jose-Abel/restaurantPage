@@ -57,7 +57,7 @@ const createMenuPage = () => {
   }
 
   // Creating the DivBoxes
-  for (let i = 0; i < 11; i+=1) {
+  for (let i = 0; i < 11; i += 1) {
     const newDivBoxElements = createDivBox({
       imageElement: imagesArray[i],
       span1Content: span1ContentArray[i],
