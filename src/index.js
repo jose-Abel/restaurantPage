@@ -1,42 +1,58 @@
 import createHomePage from "./home";
 import createMenuPage from "./menu";
 import createContactPage from "./contact";
+import loadNavbar from "./navbar";
 
-const content = document.querySelector("#content");
+const contentId = document.getElementById("content");
 
-const observer = new MutationObserver(function(mutations_list) {
-	mutations_list.forEach(function(mutation) {
-		mutation.addedNodes.forEach(function(added_node) {
-			if(added_node.id == 'nav-bar') {
-                console.log("Navbar added");
 
-                const homeTab = document.getElementById("home-tab");
-                const menuTab = document.getElementById("menu-tab");
-                const contactTab = document.getElementById("contact-tab");
+document.addEventListener("DOMContentLoaded", () => {
+    const contentId = document.getElementById("content");
 
-				homeTab.addEventListener("click", () => {
-                    content.innerHTML = "";
-                    createHomePage();
-                });
+    loadNavbar(contentId);
+    createHomePage();
 
-                menuTab.addEventListener("click", () => {
-                    content.innerHTML = "";
-                    createMenuPage();
-                });
-                
-                contactTab.addEventListener("click", () => {
-                    content.innerHTML = "";
-                    createContactPage();
-                });
-
-				observer.disconnect();
-			}
-		});
-	});
+    const homeTab = document.getElementById("home-tab");
+    const menuTab = document.getElementById("menu-tab");
+    const contactTab = document.getElementById("contact-tab");
+    
+    homeTab.addEventListener("click", runHomeTab);
+    menuTab.addEventListener("click", runMenuTab);
+    contactTab.addEventListener("click", runContactTab);
 });
 
-observer.observe(content, { subtree: false, childList: true });
+const runHomeTab = () => {
+    content.innerHTML = "";
+    loadNavbar(contentId);
+    createHomePage();
 
+    const menuTab = document.getElementById("menu-tab");
+    const contactTab = document.getElementById("contact-tab");
 
-createHomePage();
+    menuTab.addEventListener("click", runMenuTab);
+    contactTab.addEventListener("click", runContactTab);
+}
 
+const runMenuTab = () => {
+    content.innerHTML = "";
+    loadNavbar(contentId);
+    createMenuPage();
+
+    const homeTab = document.getElementById("home-tab");
+    const contactTab = document.getElementById("contact-tab");
+
+    homeTab.addEventListener("click", runHomeTab);
+    contactTab.addEventListener("click", runContactTab);
+}
+
+const runContactTab = () => {
+    content.innerHTML = "";
+    loadNavbar(contentId);
+    createContactPage();
+
+    const homeTab = document.getElementById("home-tab");
+    const menuTab = document.getElementById("menu-tab");
+
+    homeTab.addEventListener("click", runHomeTab);
+    menuTab.addEventListener("click", runMenuTab);
+}

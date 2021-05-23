@@ -12,7 +12,6 @@ const createDivBox = ( { imageElement, span1Content, span2Content, h3Element="" 
     div1.style.border = "5px solid #fceabb";
     
     if(imageElement.style.width !== "200px") {
-        
         imageElement.style.width = "500px";
         imageElement.style.height = "500px";
         imageElement.style.borderRadius = "20%";
@@ -48,11 +47,11 @@ const loadDivBox = (htmlElement, elements) => {
     const { div1, imageElement, div2, span1, span2, h3Element } = elements;
 
     if(!h3Element) {
-    htmlElement.appendChild(div1);
-    div1.appendChild(imageElement);
-    div1.appendChild(div2);
-    div2.appendChild(span1);
-    div2.appendChild(span2);
+        htmlElement.appendChild(div1);
+        div1.appendChild(imageElement);
+        div1.appendChild(div2);
+        div2.appendChild(span1);
+        div2.appendChild(span2);
     }
 
     else {

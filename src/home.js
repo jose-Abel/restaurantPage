@@ -1,5 +1,4 @@
-import loadNavBar from "./navBar";
-import {createDivBox, loadDivBox} from "./divBox";
+import { createDivBox, loadDivBox } from "./divBox";
 
 const createHomePage = () => {
 
@@ -29,16 +28,6 @@ const createHomePage = () => {
     secondImage.style.height = "200px";
     secondImage.style.borderRadius = "20%";
 
-    // Mounting Navbar
-    document.addEventListener("DOMContentLoaded", () => {
-        loadNavBar(contentId);
-    });
-    
-    // Mounting H1
-    document.addEventListener("DOMContentLoaded", () => {
-        contentId.appendChild(h1);
-    });
-
     // Creating the First Div
     let firstDivText1 = "Join us at Olive Garden Restaurant for great food, great drinks, and great company. You can relax and enjoy specials during your special events. We’ve got a fully stocked bar, comfortable seating, free Wi-Fi, and a spacious outdoor covered deck area.";
 
@@ -51,7 +40,6 @@ const createHomePage = () => {
     
     let secondDivText2 = "Sunday: 8am - 8pm / Monday: 6am - 6pm / Tuesday: 6am - 6pm / Wednesday: 6am - 6pm / Thursday: 6am - 10pm / Friday: 6am - 10pm / Saturday: 8am - 10pm";
     
-    
     const secondDivBoxElements = createDivBox({imageElement: secondImage, span1Content: secondDivText1, span2Content: secondDivText2});
 
     // Creating the Third Div
@@ -61,12 +49,11 @@ const createHomePage = () => {
     
     const thirdDivBoxElements = createDivBox({imageElement: thirdImage, span1Content: thirdDivText1, span2Content: thirdDivText2});
 
-    // Mounting the Div's
-    document.addEventListener("DOMContentLoaded", () => {
-        loadDivBox(contentId, firstDivBoxElements);
-        loadDivBox(contentId, secondDivBoxElements);
-        loadDivBox(contentId, thirdDivBoxElements);
-    });
+    // Mounting the HTML Elements
+    contentId.appendChild(h1);
+    loadDivBox(contentId, firstDivBoxElements);
+    loadDivBox(contentId, secondDivBoxElements);
+    loadDivBox(contentId, thirdDivBoxElements);
 }
 
 export default createHomePage;

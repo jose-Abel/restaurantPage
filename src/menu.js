@@ -1,4 +1,3 @@
-import loadNavBar from "./navBar";
 import { createDivBox, loadDivBox } from "./divBox";
 
 const createMenuPage = () => {
@@ -16,10 +15,8 @@ const createMenuPage = () => {
     for(let i = 0; i < 11; i++) {
         let newImage = new Image(500, 500);
         imagesArray.push(newImage);
-        console.log(newImage);
 
         let newH3 = document.createElement("h3");
-        // newH3.setAttribute("class", "h3-element");
         h3Array.push(newH3);
     }
 
@@ -51,23 +48,14 @@ const createMenuPage = () => {
     h1.style.fontSize = "5rem";
     h2.style.textAlign = "center";
     h2.style.color = "#fceabb";
-    h2.style.fontSize = "2rem";
+    h2.style.fontSize = "3.5rem";
     secondH2.style.textAlign = "center";
     secondH2.style.color = "#fceabb";
-    secondH2.style.fontSize = "2rem";
+    secondH2.style.fontSize = "3.5rem";
 
     for(let i = 1; i < imagesArray.length; i+=2) {
         imagesArray[i].style.order = 1;
     }
-
-    // Mounting Navbar
-    loadNavBar(contentId);
-
-    // Mounting H1
-    contentId.appendChild(h1);
-
-    // Mounting H2
-    contentId.appendChild(h2);
 
     // Creating the DivBoxes
     for(let i = 0; i < 11; i++) {
@@ -76,7 +64,10 @@ const createMenuPage = () => {
         divBoxElementsArray.push(newDivBoxElements);
     }
 
-    // Mounting DivBoxes
+    // Mounting the HTML Elements
+    contentId.appendChild(h1);
+    contentId.appendChild(h2);
+
     for(let i = 0; i < divBoxElementsArray.length; i++) {
         loadDivBox(contentId, divBoxElementsArray[i]);
 

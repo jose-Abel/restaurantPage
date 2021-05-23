@@ -1,4 +1,4 @@
-const createNavBar = () => {
+const createNavbar = () => {
     
     // Getting HTML element
     const nav = document.createElement("nav");
@@ -43,8 +43,8 @@ const createNavBar = () => {
     return { nav, ul, li1, li2, li3, a1, a2, a3 }
 }
 
-const loadNavBar = (htmlElement) => {
-    const { nav, ul, li1, li2, li3, a1, a2, a3 } = createNavBar();
+const loadNavbar = (htmlElement) => {
+    const { nav, ul, li1, li2, li3, a1, a2, a3 } = createNavbar();
     
     htmlElement.appendChild(nav);
     nav.appendChild(ul);
@@ -58,4 +58,4 @@ const loadNavBar = (htmlElement) => {
     li3.appendChild(a3);
 }
 
-export default loadNavBar;
+export default loadNavbar;
