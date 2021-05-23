@@ -11,7 +11,7 @@ const createMenuPage = () => {
   const h3Array = [];
   const divBoxElementsArray = [];
 
-  for (let i = 0; i < 11; i+=1) {
+  for (let i = 0; i < 11; i += 1) {
     const newImage = new Image(500, 500);
     imagesArray.push(newImage);
 
@@ -32,7 +32,7 @@ const createMenuPage = () => {
 
   const span2ContentArray = ["Onions, celery and green peppers, the 'holy trinity' of both Creole and Cajun cooking, add flavor and substance to the thick shrimp and sausage stew, which is served over a heaping portion of white rice.", 'This fish stew recipe is quite simple, but the balance of flavors is truly incredible. From lovely and familiar aromatics like onions and garlic--providing the glorious start to this recipe--to a hint of sweetness from golden raisins balanced with tart capers. All the while, a white wine and tomato-based broth marries everything together.', 'The sauce is rich and refreshing with a spicy kick. You can make the sauce in advance then assemble everything just before serving.', 'Marinated in a citrus rosemary marinade, extra virgin olive oil, garlic, pepper and lemon juice, sear it on the outside and slow-cook-low-heat method until tender.', 'Slow grilled the ribs with a salt, crushed garlic and sage rub. The rib is plenty meaty and the fat added a wonderful flavor and rendered off nicely. Taste absolutely wonderful.', 'Rice noodles among bowls. Spoon pineapple-shrimp mixture over noodles and drizzle with extra sauce. Top with cucumbers, onion, peanuts, and more basil. Served with lime wedges alongside for squeezing over.', 'Ribbony mafalda Spaghetti captures briny ricotta salata, tangy vegetables, and nutty roasted chickpeas for great flavors in every bite.', 'Palate – Elegant and well balanced, fleshy and powerful, with long lasting aromas: fruits (blackcurrant, strawberry jam), soft spices (pepper, clove).', 'Of a bright deep ruby hue this Bourgogne pinot noir 2019 offers nice cherry aromas on the nose. The palate is fresh and round with blackcurrant bud notes. A gourmet wine with silky tannins.', 'Palate: A powerful attack leads in a solidly-structured mid-palate, combining rich and fresh flavours with tightly-knit tannins. A wine with significant ageing potential, its expressive fruitiness makes it readily accessible.', 'Ideal for all occasions, from aperitif to cheese.'];
 
-  for (let i = 0; i < imagesArray.length; i+=1) {
+  for (let i = 0; i < imagesArray.length; i += 1) {
     imagesArray[i].src = imagesArraySrc[i];
 
     h3Array[i].textContent = h3ContentArray[i];
@@ -72,7 +72,7 @@ const createMenuPage = () => {
   contentId.appendChild(h1);
   contentId.appendChild(h2);
 
-  for (let i = 0; i < divBoxElementsArray.length; i+=1) {
+  for (let i = 0; i < divBoxElementsArray.length; i += 1) {
     loadDivBox(contentId, divBoxElementsArray[i]);
 
     if (i === 6) {

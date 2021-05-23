@@ -15,7 +15,7 @@ const createNavbar = () => {
   ul.style.display = 'flex';
   ul.style.justifyContent = 'center';
 
-  for (let i = 0; i < liArray.length; i++) {
+  for (let i = 0; i < liArray.length; i += 1) {
     liArray[i].style.marginRight = '2rem';
     liArray[i].style.listStyle = 'none';
     liArray[i].style.fontSize = '2rem';

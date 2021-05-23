@@ -7,7 +7,7 @@ const createHomePage = () => {
   const h1 = document.createElement('h1');
   const imagesArray = [];
 
-  for (let i = 0; i < 3; i+=1) {
+  for (let i = 0; i < 3; i += 1) {
     const newImage = new Image(500, 500);
     imagesArray.push(newImage);
   }
