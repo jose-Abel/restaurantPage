@@ -9,18 +9,23 @@ It has 3 pages, the Home, Menu and Contact page. The Home page is rendered first
 ## Built With
 - Javascript
 
+### Dev Dependencies
+- webpack,
+- webpack-cli
+- webpack-dev-server
+
 
 ## Author
 - 👤GitHub: [Jose Abel Ramirez](https://github.com/jose-Abel)
 - Linkedin: [Jose Abel Ramirez Frontany](https://www.linkedin.com/in/jose-abel-ramirez-frontany-7674a842/)
 
 ## Getting Started
-In order to run locally this project type the following commands over the terminal in Linux or Mac or the Windows cmd console, install the live-server first:
+In order to run locally this project type the following commands over the terminal in Linux or Mac or the Windows cmd console:
 
-- npm -g live-server
 - git clone https://github.com/jose-Abel/restaurantPage.git
 - cd restaurantPage
-- live-server
+- npm install
+- npm run start:dev
 
 
 ## Live Version
